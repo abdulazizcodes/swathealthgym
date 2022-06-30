@@ -5,8 +5,8 @@ import { Box, Stack, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 import Loader from './Loader';
-import bodyPartList from '../data/bodyPartList.json'
-import listOfAllExercises from '../data/listOfAllExercises.json'
+// import bodyPartList from '../data/bodyPartList.json'
+import listOfAllExercises from '../data/listOfAllExercises.json';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,10 +18,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
       if (bodyPart === 'all') {
         // exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-        exercisesData = listOfAllExercises
+        exercisesData = listOfAllExercises;
       } else {
         // exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
-        exercisesData = listOfAllExercises.filter((el)=>el.bodyPart.includes(bodyPart))
+        exercisesData = listOfAllExercises.filter((el)=>el.bodyPart.includes(bodyPart));
       }
 
       setExercises(exercisesData);

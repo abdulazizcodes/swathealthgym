@@ -1,2 +1,1 @@
-# swathealthgym
-Website for swat health gym
+#Swat Health Gym
